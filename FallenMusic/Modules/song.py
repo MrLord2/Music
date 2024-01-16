@@ -91,7 +91,7 @@ async def song(_, message: Message):
             )
             if message.chat.type != ChatType.PRIVATE:
                 await message.reply_text(
-                    "يرجى التحقق من أن المسؤول قد أرسل السوره المطلوبة."
+                    "يرجى التحقق من أن المسؤول قد أرسل الاغنيه المطلوبة."
                 )
         except:
             start_butt = InlineKeyboardMarkup(
@@ -105,7 +105,7 @@ async def song(_, message: Message):
                 ]
             )
             return await m.edit_text(
-                text="اضغط فوق الزر أدناه وابدأ في تنزيل السور",
+                text="اضغط فوق الزر أدناه وابدأ في تنزيل الاغنيه",
                 reply_markup=start_butt,
             )
         await m.delete()
